@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <button onclick="test()" style="text-align:center; background-color:red; border:none; color:white">Not virus!!!</button>
+  <button id='button' onclick="test()" style="text-align:center; background-color:red; border:none; color:white">Not virus!!!</button>
 </body>
 <script>
   test(){
+    const button = document.getElementById('button');
+    button.style.display = 'none';
     alert('Your computer is experiencing issues');
   }
 </script>
