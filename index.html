@@ -5,8 +5,27 @@
   <h1 style="font-family:Arial; color:white">The Random Site</h1>
   <button id='button' onclick="Function()" style="background-color:red; font-size:40px; font-weight:bold;border-color:red; width:150px; height:100px; color:white">Press</button>
   </div>
+  </div><p id="info">test</p>
+  <p>&#160</p>
+  <button onclick="up()1" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 1 per sec</button>
+  <button onclick="up()2" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 5 per sec</button>
+  <button onclick="up()3" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 25 per sec</button>
+  <button onclick="up()4" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 50 per sec</button>
   <script>
   x = 0;
+  cps = 5;
+    function up1(){
+      cps = 1;
+    }
+  function up2(){
+      cps = 5;
+    }
+  function up3(){
+      cps = 25;
+    }
+  function up4(){
+      cps = 50;
+    }
     function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -20,6 +39,7 @@
       document.getElementById("button").innerHTML = x;
       document.body.style.backgroundColor = getRandomColor();
     }
+  document.getElementById("info").innerHTML = cps;
     
 
 </script>
