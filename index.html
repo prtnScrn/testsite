@@ -2,13 +2,13 @@
 <html><title>Not a virus.com</title>
 <body>
   <div style="text-align:center">
-  <button id='button' onclick="Function()" style="background-color:red; font-size:40px; font-weight:bold;border-color:red; width:240px; height:100px; color:white">test</button>
-  <span id="text"></span></h1>
+  <button id='button' onclick="Function()" style="background-color:red; font-size:40px; font-weight:bold;border-color:red; width:150px; height:100px; color:white">Press</button>
   </div>
   <script>
+  x = 0;
     function Function(){
-      var number++;
-      document.getElementById("text").innerHTML = number;
+      x++;
+      document.getElementById("button").innerHTML = x;
     }
 </script>
 </body>
