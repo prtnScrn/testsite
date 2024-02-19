@@ -1,50 +1,78 @@
 <!DOCTYPE html>
-<html><title>Not a virus.com</title>
-<body background-color:#00FFFF>
-  <div style="text-align:center">
-  <h1 style="font-family:Arial; color:white">The Random Site</h1>
-  <button id='button' onclick="Function()" style="background-color:red; font-size:40px; font-weight:bold;border-color:red; width:150px; height:100px; color:white">Press</button>
+<html>
+<head>
+  <title>Not a virus.com</title>
+</head>
+<body style="background-color:#FFFFFF;">
+  <div style="text-align:center;">
+    <h1 style="font-family:Arial; color:white;">The Random Site</h1>
+    <button id='button' onclick="Function()" style="background-color:red; font-size:40px; font-weight:bold;border-color:red; width:150px; height:100px; color:white;">Press</button>
   </div>
-  </div><p style="color:white" id="info">CPS 0</p>
-  <button id="b" hidden onclick"b()" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 10 per sec</button>
-  <button id="bu" hidden onclick="bu()" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 50 per sec</button>
-  <button id="but" hidden onclick="but()" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 250 per sec</button>
-  <button id="butt" hidden onclick="butt()" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 500 per sec</button>
+  <p style="color:white;" id="info">CPS 0</p>
+  <button id='b' hidden onclick="b()" style="border-color:yellow;height:27px;font-weight:bold;">Autoclick 10 per sec</button>
+  <button id='bu' hidden onclick="bu()" style="border-color:yellow;height:27px;font-weight:bold;">Autoclick 50 per sec</button>
+  <button id='but' hidden onclick="but()" style="border-color:yellow;height:27px;font-weight:bold;">Autoclick 250 per sec</button>
+  <button id='butt' hidden onclick="butt()" style="border-color:yellow;height:27px;font-weight:bold;">Autoclick 500 per sec</button>
+
   <script>
-  x = 0;
-  cps = 0;
-    function b(){
-      cps = 10;
-      documet.getElementById('info').innerHTML = "CPS " + cps;
-      b.style.display = 'none';
-    }
-    function bu(){
-      cps = 50
-      documet.getElementById('info').innerHTML = "CPS " + cps;
-      bu.style.display = 'none';
-    }
+    var x = 0;
+    var cps = 0;
     function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
     }
-    return color;
-    }
-    function Function(){
+
+    function Function() {
       x++;
       document.getElementById("button").innerHTML = x;
       document.body.style.backgroundColor = getRandomColor();
-      if(x > 9 && x < 11){
-        b.style.display = "block";
+
+      if (x > 9 && x < 11) {
+        document.getElementById('b').style.display = "block";
       }
-      if(x > 49 && x < 51){
-        b.style.display = "none";
-        bu.style.display = "block";
+      if (x > 49 && x < 51) {
+        document.getElementById('b').style.display = "none";
+        document.getElementById('bu').style.display = "block";
+      }
+      if (x > 499 && x < 501) {
+        document.getElementById('b').style.display = "none";
+        document.getElementById('bu').style.display = "none";
+        document.getElementById('but').style.display = "block";
+      }
+      if (x > 999 && x < 1001) {
+        document.getElementById('b').style.display = "none";
+        document.getElementById('bu').style.display = "none";
+        document.getElementById('but').style.display = "none";
+        document.getElementById('butt').style.display = "block";
       }
     }
     
-
-</script>
+  </script>
+  <script>
+  function b() {
+      cps = 10;
+      document.getElementById('info').innerHTML = "CPS " + cps;
+      document.getElementById('b').style.display = "none";
+    }
+    function bu() {
+      cps = 50;
+      document.getElementById('info').innerHTML = "CPS " + cps;
+      document.getElementById('bu').style.display = "none";
+    }
+    function but() {
+      cps = 250;
+      document.getElementById('info').innerHTML = "CPS " + cps;
+      document.getElementById('but').style.display = "none";
+    }
+    function butt() {
+      cps = 500;
+      document.getElementById('info').innerHTML = "CPS " + cps;
+      document.getElementById('butt').style.display = "none";
+    }
+  </script>
 </body>
 </html>
