@@ -5,26 +5,23 @@
   <h1 style="font-family:Arial; color:white">The Random Site</h1>
   <button id='button' onclick="Function()" style="background-color:red; font-size:40px; font-weight:bold;border-color:red; width:150px; height:100px; color:white">Press</button>
   </div>
-  </div><p id="info">test</p>
-  <p>&#160</p>
-  <button onclick="up()1" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 1 per sec</button>
-  <button onclick="up()2" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 5 per sec</button>
-  <button onclick="up()3" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 25 per sec</button>
-  <button onclick="up()4" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 50 per sec</button>
+  </div><p style="color:white" id="info">CPS 0</p>
+  <button id="b" hidden onclick"b()" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 10 per sec</button>
+  <button id="bu" hidden onclick="bu()" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 50 per sec</button>
+  <button id="but" hidden onclick="but()" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 250 per sec</button>
+  <button id="butt" hidden onclick="butt()" style="border-color:yellow;height:27px;font-weight:bold">Autoclick 500 per sec</button>
   <script>
   x = 0;
-  cps = 5;
-    function up1(){
-      cps = 1;
+  cps = 0;
+    function b(){
+      cps = 10;
+      documet.getElementById('info').innerHTML = "CPS " + cps;
+      b.style.display = 'none';
     }
-  function up2(){
-      cps = 5;
-    }
-  function up3(){
-      cps = 25;
-    }
-  function up4(){
-      cps = 50;
+    function bu(){
+      cps = 50
+      documet.getElementById('info').innerHTML = "CPS " + cps;
+      bu.style.display = 'none';
     }
     function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -38,8 +35,14 @@
       x++;
       document.getElementById("button").innerHTML = x;
       document.body.style.backgroundColor = getRandomColor();
+      if(x > 9 && x < 11){
+        b.style.display = "block";
+      }
+      if(x > 49 && x < 51){
+        b.style.display = "none";
+        bu.style.display = "block";
+      }
     }
-  document.getElementById("info").innerHTML = cps;
     
 
 </script>
