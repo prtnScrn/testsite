@@ -64,15 +64,22 @@
       document.getElementById('bu').style.display = "none";
     }
     function but() {
-      cps = 250;
+      cps = 75;
       document.getElementById('info').innerHTML = "    CPS " + cps;
       document.getElementById('but').style.display = "none";
     }
     function butt() {
-      cps = 500;
+      cps = 100;
       document.getElementById('info').innerHTML = "    CPS " + cps;
       document.getElementById('butt').style.display = "none";
     }
+  </script>
+  <script>
+    function cps() {
+      x += cps;
+      document.getElementById("button").innerHTML = x;
+    }
+    setInterval(updateTimer, 1000);
   </script>
 </body>
 </html>
