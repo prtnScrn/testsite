@@ -17,6 +17,7 @@
   <script>
     var x = 0;
     var cps = 0;
+    var button;
     function getRandomColor() {
       var letters = '0123456789ABCDEF';
       var color = '#';
@@ -31,19 +32,23 @@
       document.getElementById("button").innerHTML = x;
       document.body.style.backgroundColor = getRandomColor();
 
-      if (x > 9 && x < 11) {
+      if (x > 9 && button < 1) {
+        button = 1;
         document.getElementById('b').style.display = "block";
       }
-      if (x > 49 && x < 51) {
+      if (x > 49 && button < 2) {
+        button = 2;
         document.getElementById('b').style.display = "none";
         document.getElementById('bu').style.display = "block";
       }
-      if (x > 499 && x < 501) {
+      if (x > 499 && button < 3) {
+        button = 3;
         document.getElementById('b').style.display = "none";
         document.getElementById('bu').style.display = "none";
         document.getElementById('but').style.display = "block";
       }
-      if (x > 999 && x < 1001) {
+      if (x > 999 && button < 4) {
+        button = 4;
         document.getElementById('b').style.display = "none";
         document.getElementById('bu').style.display = "none";
         document.getElementById('but').style.display = "none";
