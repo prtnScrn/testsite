@@ -127,13 +127,13 @@
   </script>
   <script>
     function count() {
-      x += cps;
+      x++;
       if(x>0){
       document.getElementById("button").innerHTML = x;
       }
       check()
     }
-    setInterval(count, 1000);
+    setInterval(count, 1000 / cps);
   </script>
 </body>
 </html>
