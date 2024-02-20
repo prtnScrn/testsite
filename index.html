@@ -82,7 +82,9 @@
   <script>
     function count() {
       x += cps;
+      if(x>0){
       document.getElementById("button").innerHTML = x;
+      }
     }
     setInterval(count, 1000);
   </script>
