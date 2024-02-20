@@ -33,11 +33,16 @@
     }
 
     function Function() {
-      x = 1 + click;
+      x += 1 + click;
       document.getElementById("button").innerHTML = x;
       document.body.style.backgroundColor = getRandomColor();
-
-      if (x > 9 && c < 1) {
+      check()
+      }
+    
+  </script>
+  <script>
+  function check(){
+    if (x > 9 && c < 1) {
         c = 1;
         document.getElementById('b').style.display = "block";
       }
@@ -59,31 +64,30 @@
         document.getElementById('but').style.display = "none";
         document.getElementById('butt').style.display = "block";
       }
-      if (x > 1499 && c < 5)
+      if (x > 1499 && c < 5){
         c = 5;
         document.getElementById('up1').style.display = 'block';
       } 
-      if (x > 4999 && c < 6)
+      if (x > 4999 && c < 6){
         c = 6;
         document.getElementById('up1').style.display = 'none';
         document.getElementById('up2').style.display = 'block';
       } 
-      if (x > 9999 && c < 7)
+      if (x > 9999 && c < 7){
         c = 7;
         document.getElementById('up1').style.display = 'none';
         document.getElementById('up2').style.display = 'none';
         document.getElementById('up3').style.display = 'block';
       } 
-      if (x > 99999 && c < 8)
+      if (x > 99999 && c < 8){
         c = 8;
         document.getElementById('up1').style.display = 'none';
         document.getElementById('up2').style.display = 'none';
         document.getElementById('up3').style.display = 'none';
         document.getElementById('up4').style.display = 'block';
       } 
-    
-  </script>
-  <script>
+  }
+  
   function b() {
       cps = 10;
       document.getElementById('info').innerHTML = "    CPS " + cps;
@@ -127,6 +131,7 @@
       if(x>0){
       document.getElementById("button").innerHTML = x;
       }
+      check()
     }
     setInterval(count, 1000);
   </script>
