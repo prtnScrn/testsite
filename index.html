@@ -37,12 +37,14 @@
       document.getElementById("button").innerHTML = x;
       document.body.style.backgroundColor = getRandomColor();
       check()
-      }
+    }
     
-  </script>
-  <script>
-  function check(){
-    if (x > 9 && c < 1) {
+    function check(){
+      if(cps > 0) {
+        setInterval(count, 1000 / cps);
+      }
+      
+      if (x > 9 && c < 1) {
         c = 1;
         document.getElementById('b').style.display = "block";
       }
@@ -124,19 +126,13 @@
       click = 99;
       document.getElementById('up4').style.display = "none";
     }
-  </script>
-  <script>
+    
     function count() {
-      if(cps>0){
-        x++;
-        check();
-        if(x>0){
+      x++;
+      if(x > 0){
         document.getElementById("button").innerHTML = x;
-        }
-        }
-        }
-    setInterval(count, 1000 / cps);
-  
+      }
+    }
   </script>
 </body>
 </html>
