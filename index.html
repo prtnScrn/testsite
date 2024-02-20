@@ -127,15 +127,16 @@
   </script>
   <script>
     function count() {
-      x++;
-      if(x>0){
-      document.getElementById("button").innerHTML = x;
-      }
-      check();
-    }
-    if(cps>0){
+      if(cps>0){
+        x++;
+        check();
+        if(x>0){
+        document.getElementById("button").innerHTML = x;
+        }
+        }
+        }
     setInterval(count, 1000 / cps);
-    }
+  
   </script>
 </body>
 </html>
