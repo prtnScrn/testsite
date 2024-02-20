@@ -13,8 +13,13 @@
   <button id='bu' hidden onclick="bu()" style="border-color:yellow;height:27px;font-weight:bold;">Autoclick 50 per sec</button>
   <button id='but' hidden onclick="but()" style="border-color:yellow;height:27px;font-weight:bold;">Autoclick 75 per sec</button>
   <button id='butt' hidden onclick="butt()" style="border-color:yellow;height:27px;font-weight:bold;">Autoclick 100 per sec</button>
+  <button id='up1' hidden onclick="up1()" style="border-color:yellow;height:27px;font-weight:bold;">Double click</button>
+  <button id='up2' hidden onclick="up2()" style="border-color:yellow;height:27px;font-weight:bold;">Octople click</button>
+  <button id='up3' hidden onclick="up3()" style="border-color:yellow;height:27px;font-weight:bold;">20 click</button>
+  <button id='up4' hidden onclick="up4()" style="border-color:yellow;height:27px;font-weight:bold;">100 click</button>
 
   <script>
+    var click = 0;
     var x = 0;
     var cps = 0;
     var c = 0;
@@ -54,7 +59,28 @@
         document.getElementById('but').style.display = "none";
         document.getElementById('butt').style.display = "block";
       }
-    }
+      if (x > 1499 && c < 5)
+        c = 5;
+        document.getElementById('up1').style.display = 'block';
+      } 
+      if (x > 4999 && c < 6)
+        c = 6;
+        document.getElementById('up1').style.display = 'none';
+        document.getElementById('up2').style.display = 'block';
+      } 
+      if (x > 9999 && c < 7)
+        c = 7;
+        document.getElementById('up1').style.display = 'none';
+        document.getElementById('up2').style.display = 'none';
+        document.getElementById('up3').style.display = 'block';
+      } 
+      if (x > 99999 && c < 8)
+        c = 8;
+        document.getElementById('up1').style.display = 'none';
+        document.getElementById('up2').style.display = 'none';
+        document.getElementById('up3').style.display = 'none';
+        document.getElementById('up4').style.display = 'block';
+      } 
     
   </script>
   <script>
@@ -77,6 +103,22 @@
       cps = 100;
       document.getElementById('info').innerHTML = "    CPS " + cps;
       document.getElementById('butt').style.display = "none";
+    }
+    function up1() {
+      click = 1;
+      document.getElementById('up1').style.display = "none";
+    }
+    function up2() {
+      click = 8;
+      document.getElementById('up2').style.display = "none";
+    }
+    function up3() {
+      click = 20;
+      document.getElementById('up3').style.display = "none";
+    }
+    function up4() {
+      click = 100;
+      document.getElementById('up4').style.display = "none";
     }
   </script>
   <script>
