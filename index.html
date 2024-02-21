@@ -85,17 +85,16 @@
         document.getElementById('up3').style.display = 'none';
         document.getElementById('up4').style.display = 'block';
       } 
-      function count() {
+  }
+function count() {
       if(cps>0){
       x++;
       if(x > 0){
         document.getElementById("button").innerHTML = x;
-        setTimeout(count, 1000/cps);
-      } }
+      } setTimeout(count, 1000/cps); }
     }
     setTimeout(count, 1000/cps);
-  }
-  
+    
   function b() {
       cps = 10;
       document.getElementById('info').innerHTML = "    CPS " + cps;
