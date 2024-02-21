@@ -42,29 +42,21 @@
     function check(){
       
       if (x > 9 && c < 1) {
-        if (c < 1){
-        setInterval(count, 1000 / cps);}
         c = 1;
         document.getElementById('b').style.display = "block";
       }
       if (x > 49 && c < 2) {
-        if (c < 1){
-        setInterval(count, 1000 / cps);}
         c = 2;
         document.getElementById('b').style.display = "none";
         document.getElementById('bu').style.display = "block";
       }
       if (x > 499 && c < 3) {
-        if (c < 1){
-        setInterval(count, 1000 / cps);}
         c = 3;
         document.getElementById('b').style.display = "none";
         document.getElementById('bu').style.display = "none";
         document.getElementById('but').style.display = "block";
       }
       if (x > 999 && c < 4) {
-        if (c < 1){
-        setInterval(count, 1000 / cps);}
         c = 4;
         document.getElementById('b').style.display = "none";
         document.getElementById('bu').style.display = "none";
@@ -139,8 +131,10 @@
       x++;
       if(x > 0){
         document.getElementById("button").innerHTML = x;
+        setTimeout(count, cps);
       } }
     }
+    setTimeout(count, cps);
   </script>
 </body>
 </html>
