@@ -40,9 +40,6 @@
     }
     
     function check(){
-      if(cps > 0 && x < 2) {
-        setInterval(count, 1000 / cps);
-      }
       
       if (x > 9 && c < 1) {
         c = 1;
@@ -128,10 +125,12 @@
     }
     
     function count() {
+      if(cps>0){
       x++;
       if(x > 0){
         document.getElementById("button").innerHTML = x;
-      }
+      } }
+    setInterval(count, 1000 / cps);
     }
   </script>
 </body>
