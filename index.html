@@ -4,9 +4,9 @@
   <title>Not a virus.com</title>
 </head>
 <body style="background-color:#FFFFFF;">
-  <div id="update" style="text-align:center; font-family:Arial" hidden>
+  <div id="update" style="text-align:center; font-family:Arial; color:white" hidden>
     <h1>Updating :]]]</h1>
-    <img src="update.gif">
+    <img src="update.gif" style="width:400px; height:400px">
   </div>
   <div id="update1">
   <button hidden id="reset" onclick="reset()" style="font-weight:bold; color:white; background-color:black; font-size:20px; width:70px; height:40px">Reset</button>
@@ -166,7 +166,14 @@ if(updating === 0){
       } } setTimeout(count, 1000/cps);
     }
     setTimeout(count, 1000/cps);
-    } else {document.getElementById("update").style.display = "block"; document.getElementById("update1").style.display = "none"; setInterval(getRandomColor, 10000)}
+    } else {document.getElementById("update").style.display = "block"; document.getElementById("update1").style.display = "none"; function getRandomColor(){
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      document.body.style.backgroundColor = color;
+    }; setInterval(getRandomColor, 1000);}
   </script>
 </body>
 </html>
