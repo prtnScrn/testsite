@@ -33,12 +33,12 @@
       }
       return color;
     }
-    x = localStorage.getItem("inf1");
+    x = localStorage.getItem("inf1"); x = Number(x);
     if(x>0){document.body.style.backgroundColor = getRandomColor();}
-    c = localStorage.getItem("inf2");
-    d = localStorage.getItem("inf3");
-    cps = localStorage.getItem("inf4");
-    click = localStorage.getItem("inf5");
+    c = localStorage.getItem("inf2"); c = Number(c);
+    d = localStorage.getItem("inf3"); c = Number(d);
+    cps = localStorage.getItem("inf4"); c = Number(cps);
+    click = localStorage.getItem("inf5"); c = Number(click);
     function save(){ // save system
         localStorage.setItem("inf1", x);
         localStorage.setItem("inf2", c);
@@ -48,7 +48,7 @@
       }
     function reset(){localStorage.clear()}
     function Function() { // adds after click
-      x += 1 + Number(click);
+      x += 1 + click;
       save();
       document.getElementById("button").innerHTML = x;
       document.body.style.backgroundColor = getRandomColor();
