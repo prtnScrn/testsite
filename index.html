@@ -4,6 +4,7 @@
   <title>Not a virus.com</title>
 </head>
 <body style="background-color:#FFFFFF;">
+  <button onclick="reset">Reset</button>
   <div style="text-align:center;">
     <h1 style="font-family:Arial; color:white;">The Random Site</h1>
     <button id='button' onclick="Function()" style="background-color:red; font-size:40px; font-weight:bold;border-color:red; width:150px; height:100px; color:white;">Press</button>
@@ -45,7 +46,7 @@
         localStorage.setItem("inf4", cps);
         localStorage.setItem("inf5", click);
       }
-
+    function reset(){localStorage.clear()}
     function Function() { // adds after click
       x += 1 + Number(click);
       save();
