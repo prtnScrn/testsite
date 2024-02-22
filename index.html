@@ -46,14 +46,6 @@
         localStorage.setItem("inf4", cps);
         localStorage.setItem("inf5", click);
       }
-   function reset() {
-    localStorage.clear();
-    var click = 0;
-    var x = 0;
-    var cps = 0;
-    var c = 0;
-    var d = 0;
-}
     function Function() { // adds after click
       x += 1 + click;
       save();
@@ -144,6 +136,14 @@
     function up4() {
       click = 499;
       document.getElementById('up4').style.display = "none";
+    }
+    function reset() {
+      localStorage.clear();
+      click = 0;
+      x = 0;
+      cps = 0;
+      c = 0;
+      d = 0;
     }
   </script>
   <script>
