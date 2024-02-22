@@ -4,6 +4,7 @@
   <title>Not a virus.com</title>
 </head>
 <body style="background-color:#FFFFFF;">
+  <button onclick"save()">Save</button>
   <div style="text-align:center;">
     <h1 style="font-family:Arial; color:white;">The Random Site</h1>
     <button id='button' onclick="Function()" style="background-color:red; font-size:40px; font-weight:bold;border-color:red; width:150px; height:100px; color:white;">Press</button>
@@ -23,6 +24,12 @@
     var x = 0;
     var cps = 0;
     var c = 0;
+    var d = 0;
+    localStorage.getItem("inf1");
+    localStorage.getItem("inf2");
+    localStorage.getItem("inf3");
+    localStorage.getItem("inf4");
+    localStorage.getItem("inf5");
     function getRandomColor() {
       var letters = '0123456789ABCDEF';
       var color = '#';
@@ -38,9 +45,15 @@
       document.body.style.backgroundColor = getRandomColor();
       check()
     }
+    function save(){
+        localStorage.setItem("inf1", x);
+        localStorage.setItem("inf2", c);
+        localStorage.setItem("inf3", d);
+        localStorage.setItem("inf4", cps);
+        localStorage.setItem("inf5", click);
+      }
     
     function check(){
-      
       if (x > 9 && c < 1) {
         c = 1;
         document.getElementById('b').style.display = "block";
@@ -63,23 +76,23 @@
         document.getElementById('but').style.display = "none";
         document.getElementById('butt').style.display = "block";
       }
-      if (x > 1499 && c < 5){
-        c = 5;
+      if (x > 1499 && d < 1){
+        d = 1;
         document.getElementById('up1').style.display = 'block';
       } 
-      if (x > 4999 && c < 6){
-        c = 6;
+      if (x > 4999 && d < 2){
+        d = 2;
         document.getElementById('up1').style.display = 'none';
         document.getElementById('up2').style.display = 'block';
       } 
-      if (x > 9999 && c < 7){
-        c = 7;
+      if (x > 9999 && d < 3){
+        d = 3;
         document.getElementById('up1').style.display = 'none';
         document.getElementById('up2').style.display = 'none';
         document.getElementById('up3').style.display = 'block';
       } 
-      if (x > 49999 && c < 8){
-        c = 8;
+      if (x > 49999 && d < 4){
+        d = 4;
         document.getElementById('up1').style.display = 'none';
         document.getElementById('up2').style.display = 'none';
         document.getElementById('up3').style.display = 'none';
