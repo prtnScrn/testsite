@@ -25,7 +25,7 @@
   </div>
 
   <script>
-var updating = 0;
+var updating = 1;
 if(updating === 0){
     var click = 0;
     var x = 0;
@@ -41,7 +41,7 @@ if(updating === 0){
       document.body.style.backgroundColor = color;
     }
     x = Number(localStorage.getItem("inf1")); 
-    if(x>0){document.body.style.backgroundColor = getRandomColor(); document.getElementById('reset').style.display = "block";}
+    if(x>0){document.getElementById("button").innerHTML = x; document.body.style.backgroundColor = getRandomColor(); document.getElementById('reset').style.display = "block";}
     c = Number(localStorage.getItem("inf2"));
     d = Number(localStorage.getItem("inf3")); 
     cps = Number(localStorage.getItem("inf4")); 
