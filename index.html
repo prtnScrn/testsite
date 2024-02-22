@@ -4,7 +4,7 @@
   <title>Not a virus.com</title>
 </head>
 <body style="background-color:#FFFFFF;">
-  <button onclick="reset()">Reset</button>
+  <button hidden id="reset" onclick="reset()" style="font-weight:bold; color:white; background-color:black; font-size:20px; width:70px; height:40px">Reset</button>
   <div style="text-align:center;">
     <h1 style="font-family:Arial; color:white;">The Random Site</h1>
     <button id='button' onclick="Function()" style="background-color:red; font-size:40px; font-weight:bold;border-color:red; width:150px; height:100px; color:white;">Press</button>
@@ -34,7 +34,7 @@
       return color;
     }
     x = Number(localStorage.getItem("inf1")); 
-    if(x>0){document.body.style.backgroundColor = getRandomColor();}
+    if(x>0){document.body.style.backgroundColor = getRandomColor(); document.getElementById('reset').style.display = "block";}
     c = Number(localStorage.getItem("inf2"));
     d = Number(localStorage.getItem("inf3")); 
     cps = Number(localStorage.getItem("inf4")); 
@@ -55,6 +55,7 @@
     }
     
     function check(){ // checks to see if something qualifies for one of the functions or ifs
+      if(x>0){document.getElementById('reset').style.display = "block";}
       if (x > 9 && c < 1) {
         c = 1;
         document.getElementById('b').style.display = "block";
@@ -141,6 +142,7 @@
       localStorage.clear();
       click = 0;
       x = 0;
+      document.getElementById("button").innerHTML = x;
       cps = 0;
       c = 0;
       d = 0;
