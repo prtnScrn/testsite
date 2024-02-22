@@ -47,7 +47,7 @@
       }
 
     function Function() { // adds after click
-      x += 1 + click;
+      x += 1 + Number(click);
       save();
       document.getElementById("button").innerHTML = x;
       document.body.style.backgroundColor = getRandomColor();
