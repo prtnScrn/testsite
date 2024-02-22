@@ -24,18 +24,6 @@
     var cps = 0;
     var c = 0;
     var d = 0;
-    x = localStorage.getItem("inf1");
-    c = localStorage.getItem("inf2");
-    d = localStorage.getItem("inf3");
-    cps = localStorage.getItem("inf4");
-    click = localStorage.getItem("inf5");
-    function save(){ // save system
-        localStorage.setItem("inf1", 5);
-        localStorage.setItem("inf2", c);
-        localStorage.setItem("inf3", d);
-        localStorage.setItem("inf4", cps);
-        localStorage.setItem("inf5", click);
-      }
     function getRandomColor() { // gets random color
       var letters = '0123456789ABCDEF';
       var color = '#';
@@ -44,6 +32,19 @@
       }
       return color;
     }
+    x = localStorage.getItem("inf1");
+    if(x>0){document.body.style.backgroundColor = getRandomColor();}
+    c = localStorage.getItem("inf2");
+    d = localStorage.getItem("inf3");
+    cps = localStorage.getItem("inf4");
+    click = localStorage.getItem("inf5");
+    function save(){ // save system
+        localStorage.setItem("inf1", x);
+        localStorage.setItem("inf2", c);
+        localStorage.setItem("inf3", d);
+        localStorage.setItem("inf4", cps);
+        localStorage.setItem("inf5", click);
+      }
 
     function Function() { // adds after click
       x += 1 + click;
