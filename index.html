@@ -46,6 +46,7 @@ if(updating === 0){
     c = Number(localStorage.getItem("inf2"));
     d = Number(localStorage.getItem("inf3")); 
     cps = Number(localStorage.getItem("inf4")); 
+    document.getElementById('info').innerHTML = "    CPS " + cps;
     click = Number(localStorage.getItem("inf5")); 
     function save(){ // save system
         localStorage.setItem("inf1", x);
