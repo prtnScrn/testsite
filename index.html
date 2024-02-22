@@ -15,8 +15,8 @@
   <button id='butt' hidden onclick="butt()" style="border-color:yellow;height:27px;font-weight:bold;">Autoclick 100 per sec</button>
   <button id='up1' hidden onclick="up1()" style="border-color:yellow;height:27px;font-weight:bold;">Double click</button>
   <button id='up2' hidden onclick="up2()" style="border-color:yellow;height:27px;font-weight:bold;">Octople click</button>
-  <button id='up3' hidden onclick="up3()" style="border-color:yellow;height:27px;font-weight:bold;">20 click</button>
-  <button id='up4' hidden onclick="up4()" style="border-color:yellow;height:27px;font-weight:bold;">100 click</button>
+  <button id='up3' hidden onclick="up3()" style="border-color:yellow;height:27px;font-weight:bold;">50 click</button>
+  <button id='up4' hidden onclick="up4()" style="border-color:yellow;height:27px;font-weight:bold;">500 click</button>
 
   <script>
     var click = 0;
@@ -78,7 +78,7 @@
         document.getElementById('up2').style.display = 'none';
         document.getElementById('up3').style.display = 'block';
       } 
-      if (x > 99999 && c < 8){
+      if (x > 49999 && c < 8){
         c = 8;
         document.getElementById('up1').style.display = 'none';
         document.getElementById('up2').style.display = 'none';
@@ -116,11 +116,11 @@
       document.getElementById('up2').style.display = "none";
     }
     function up3() {
-      click = 19;
+      click = 49;
       document.getElementById('up3').style.display = "none";
     }
     function up4() {
-      click = 99;
+      click = 499;
       document.getElementById('up4').style.display = "none";
     }
   </script>
