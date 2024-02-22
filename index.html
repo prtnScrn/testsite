@@ -4,6 +4,10 @@
   <title>Not a virus.com</title>
 </head>
 <body style="background-color:#FFFFFF;">
+  <div id="update" style="text-align:center;">
+    <h1>Updating :]]]</h1>
+  </div>
+  <div id="update1">
   <button hidden id="reset" onclick="reset()" style="font-weight:bold; color:white; background-color:black; font-size:20px; width:70px; height:40px">Reset</button>
   <div style="text-align:center;">
     <h1 style="font-family:Arial; color:white;">The Random Site</h1>
@@ -18,8 +22,11 @@
   <button id='up2' hidden onclick="up2()" style="border-color:yellow;height:27px;font-weight:bold;">Octople click</button>
   <button id='up3' hidden onclick="up3()" style="border-color:yellow;height:27px;font-weight:bold;">50 click</button>
   <button id='up4' hidden onclick="up4()" style="border-color:yellow;height:27px;font-weight:bold;">500 click</button>
+  </div>
 
   <script>
+var updating = 0;
+if(updating = 0){
     var click = 0;
     var x = 0;
     var cps = 0;
@@ -31,7 +38,7 @@
       for (var i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
       }
-      return color;
+      document.body.style.backgroundColor = color;
     }
     x = Number(localStorage.getItem("inf1")); 
     if(x>0){document.body.style.backgroundColor = getRandomColor(); document.getElementById('reset').style.display = "block";}
@@ -50,7 +57,7 @@
       x += 1 + click;
       save();
       document.getElementById("button").innerHTML = x;
-      document.body.style.backgroundColor = getRandomColor();
+      getRandomColor();
       check();
     }
     
@@ -143,6 +150,7 @@
       click = 0;
       x = 0;
       document.getElementById("button").innerHTML = x;
+      document.getElementById("info").innerHTML = '0';
       cps = 0;
       c = 0;
       d = 0;
@@ -159,6 +167,7 @@
       } } setTimeout(count, 1000/cps);
     }
     setTimeout(count, 1000/cps);
+    } else {document.getElementById("update").style.display = "block"; document.getElementById("update1").style.display = "none"; setInterval(getRandomColor, 10000)}
   </script>
 </body>
 </html>
