@@ -33,12 +33,12 @@
       }
       return color;
     }
-    x = localStorage.getItem("inf1"); x = Number(x);
+    x = Number(localStorage.getItem("inf1")); 
     if(x>0){document.body.style.backgroundColor = getRandomColor();}
-    c = localStorage.getItem("inf2"); c = Number(c);
-    d = localStorage.getItem("inf3"); c = Number(d);
-    cps = localStorage.getItem("inf4"); c = Number(cps);
-    click = localStorage.getItem("inf5"); c = Number(click);
+    c = Number(localStorage.getItem("inf2"));
+    d = Number(localStorage.getItem("inf3")); 
+    cps = Number(localStorage.getItem("inf4")); 
+    click = Number(localStorage.getItem("inf5")); 
     function save(){ // save system
         localStorage.setItem("inf1", x);
         localStorage.setItem("inf2", c);
