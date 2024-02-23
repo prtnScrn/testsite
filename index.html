@@ -10,7 +10,7 @@
     <label style="right:5px;bottom:32px;position:fixed;">DEV console</label>
     <input id="devconsole" style="right:5px;bottom:5px;position:fixed;"></input>
     <button onclick="dc()" style="right:215px;bottom:5px;position:fixed;">Run</button>
-    <p id="in0"></p>
+    <p id="inf0"></p>
   </div>
   <div id="update1">
   <button hidden id="reset" onclick="reset()" style="font-weight:bold; color:white; background-color:black; font-size:20px; width:70px; height:40px">Reset</button>
@@ -172,17 +172,20 @@ if(updating === 0){
       } } setTimeout(count, 1000/cps);
     }
     setTimeout(count, 1000/cps);
-    } else {document.getElementById("update").style.display = "block"; document.getElementById("update1").style.display = "none"; function getRandomColor(){
-      var letters = '0123456789ABCDEF';
-      var color = '#';
-      for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-      }
-      document.body.style.backgroundColor = color;
-    }; getRandomColor(); setInterval(getRandomColor, 1000);
-      function dc(){
-    document.getElementById('inf0') = = document.getElementById('devconsole');
-  }
+    } else {
+    document.getElementById("update").style.display = "block"; document.getElementById("update1").style.display = "none"; 
+  
+    function getRandomColor(){
+          var letters = '0123456789ABCDEF';
+          var color = '#';
+          for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          document.body.style.backgroundColor = color;
+          }; getRandomColor(); setInterval(getRandomColor, 1000); 
+    
+    function dc(){
+      document.getElementById('inf0') = = document.getElementById('devconsole');
       }
   </script>
 </body>
