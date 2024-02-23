@@ -38,10 +38,6 @@ if(updating === 0){
     var c = 0;
     var d = 0;
   
-  function dc(){
-    document.getElementById('inf0') = = document.getElementById('devconsole');
-  }
-  
     function getRandomColor() { // gets random color
       var letters = '0123456789ABCDEF';
       var color = '#';
@@ -183,7 +179,11 @@ if(updating === 0){
         color += letters[Math.floor(Math.random() * 16)];
       }
       document.body.style.backgroundColor = color;
-    }; getRandomColor(); setInterval(getRandomColor, 1000);}
+    }; getRandomColor(); setInterval(getRandomColor, 1000);
+      function dc(){
+    document.getElementById('inf0') = = document.getElementById('devconsole');
+  }
+      }
   </script>
 </body>
 </html>
