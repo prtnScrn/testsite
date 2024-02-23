@@ -10,6 +10,7 @@
     <label style="right:5px;bottom:32px;position:fixed;">DEV console</label>
     <input id="devconsole" style="right:5px;bottom:5px;position:fixed;"></input>
     <button onclick="dc()" style="right:65px;bottom:5px;position:fixed;">Run</button>
+    <p id="in0"></p>
   </div>
   <div id="update1">
   <button hidden id="reset" onclick="reset()" style="font-weight:bold; color:white; background-color:black; font-size:20px; width:70px; height:40px">Reset</button>
@@ -36,7 +37,11 @@ if(updating === 0){
     var cps = 0;
     var c = 0;
     var d = 0;
-  function dc(){}
+  
+  function dc(){
+    document.getElementById('inf0') = = document.getElementById('devconsole');
+  }
+  
     function getRandomColor() { // gets random color
       var letters = '0123456789ABCDEF';
       var color = '#';
