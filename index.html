@@ -30,7 +30,7 @@
   </div>
 
   <script>
-var updating = 0;
+var updating = 1;
     function getRandomColor() { // gets random color
       var letters = '0123456789ABCDEF';
       var color = '#';
@@ -39,7 +39,7 @@ var updating = 0;
       }
       document.body.style.backgroundColor = color;
     }
-if(updating === 1){
+if(updating === 0){
     var click = 0;
     var x = 0;
     var cps = 0;
@@ -178,7 +178,7 @@ if(updating === 1){
     setInterval(getRandomColor, 1000); 
     
     function dc(){
-      document.getElementById('inf0').innerHTML = document.getElementById('devconsole');
+      document.getElementById('inf0').innerHTML = document.getElementById('devconsole').value;
       }
   }
   </script>
