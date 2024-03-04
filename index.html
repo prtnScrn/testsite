@@ -31,13 +31,6 @@
 
   <script>
 var updating = 1;
-if(updating === 0){
-    var click = 0;
-    var x = 0;
-    var cps = 0;
-    var c = 0;
-    var d = 0;
-  
     function getRandomColor() { // gets random color
       var letters = '0123456789ABCDEF';
       var color = '#';
@@ -46,6 +39,13 @@ if(updating === 0){
       }
       document.body.style.backgroundColor = color;
     }
+if(updating === 0){
+    var click = 0;
+    var x = 0;
+    var cps = 0;
+    var c = 0;
+    var d = 0;
+  
     x = Number(localStorage.getItem("inf1")); 
     if(x>0){document.getElementById("button").innerHTML = x; document.body.style.backgroundColor = getRandomColor(); document.getElementById('reset').style.display = "block";}
     c = Number(localStorage.getItem("inf2"));
@@ -175,19 +175,12 @@ if(updating === 0){
     } else {
     document.getElementById("update").style.display = "block"; 
     document.getElementById("update1").style.display = "none"; 
-  
-    function getRandomColor(){
-          var letters = '0123456789ABCDEF';
-          var color = '#';
-          for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-          }
-          document.body.style.backgroundColor = color;
-          }; getRandomColor(); setInterval(getRandomColor, 1000); 
+    setInterval(getRandomColor, 1000); 
     
     function dc(){
       document.getElementById('inf0') = document.getElementById('devconsole');
       }
+  }
   </script>
 </body>
 </html>
