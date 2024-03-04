@@ -39,7 +39,7 @@ var updating = 0;
       }
       document.body.style.backgroundColor = color;
     }
-if(updating === 0){
+if(updating === 1){
     var click = 0;
     var x = 0;
     var cps = 0;
@@ -178,7 +178,7 @@ if(updating === 0){
     setInterval(getRandomColor, 1000); 
     
     function dc(){
-      document.getElementById('inf0') = document.getElementById('devconsole');
+      document.getElementById('inf0').innerHTML = document.getElementById('devconsole');
       }
   }
   </script>
