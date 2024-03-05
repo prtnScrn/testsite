@@ -39,20 +39,6 @@ var updating = 1;
       }
       document.body.style.backgroundColor = color;
     }
-if(updating === 0){
-    var click = 0;
-    var x = 0;
-    var cps = 0;
-    var c = 0;
-    var d = 0;
-  
-    x = Number(localStorage.getItem("inf1")); 
-    if(x>0){document.getElementById("button").innerHTML = x; document.body.style.backgroundColor = getRandomColor(); document.getElementById('reset').style.display = "block";}
-    c = Number(localStorage.getItem("inf2"));
-    d = Number(localStorage.getItem("inf3")); 
-    cps = Number(localStorage.getItem("inf4")); 
-    document.getElementById('info').innerHTML = "    CPS " + cps;
-    click = Number(localStorage.getItem("inf5")); 
     function save(){ // save system
         localStorage.setItem("inf1", x);
         localStorage.setItem("inf2", c);
@@ -60,6 +46,19 @@ if(updating === 0){
         localStorage.setItem("inf4", cps);
         localStorage.setItem("inf5", click);
       }
+    var click = 0;
+    var x = 0;
+    var cps = 0;
+    var c = 0;
+    var d = 0;
+    x = Number(localStorage.getItem("inf1")); 
+    if(x>0){document.getElementById("button").innerHTML = x; document.body.style.backgroundColor = getRandomColor(); document.getElementById('reset').style.display = "block";}
+    c = Number(localStorage.getItem("inf2"));
+    d = Number(localStorage.getItem("inf3")); 
+    cps = Number(localStorage.getItem("inf4")); 
+    document.getElementById('info').innerHTML = "    CPS " + cps;
+    click = Number(localStorage.getItem("inf5"));
+if(updating === 0){ 
     function Function() { // adds after click
       x += 1 + click;
       save();
@@ -178,7 +177,8 @@ if(updating === 0){
     setInterval(getRandomColor, 1000); 
     
     function dc(){
-      document.getElementById('inf0').innerHTML = document.getElementById('devconsole').value;
+      document.getElementById('inf0').innerHTML = "ran " + document.getElementById('devconsole').value;
+      if(document.getElementById('devconsole').value = "!setplayer0"){}
       }
   }
   </script>
