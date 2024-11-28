@@ -5,7 +5,7 @@
 </head>
 <body style="background-color:#FFFFFF;">
   <div id="update" style="text-align:center; font-family:Arial; color:white" hidden>
-    <h1>NOT Updrating! Not today ash >:]</h1>
+    <h1>NOT Updating! Not today ash >:]</h1>
     <img src="update.gif" style="width:400px; height:400px;">
     <label style="right:5px;bottom:32px;position:fixed;">DEV console</label>
     <input id="devconsole" style="right:5px;bottom:5px;position:fixed;">
@@ -179,6 +179,8 @@ if(updating === 0){
     function dc(){
       document.getElementById('inf0').innerHTML = "unsuccessful " + document.getElementById('devconsole').value;
       if(document.getElementById('devconsole').value=="!setplayer0"){x=0;save();document.getElementById('inf0').innerHTML = "ran succesfully " + document.getElementById('devconsole').value;}
+      }
+    if(document.getElementById('devconsole').value=="!accessgame"){update=1;save();document.getElementById('inf0').innerHTML = "ran succesfully " + document.getElementById('devconsole').value;}
       }
   }
   </script>
