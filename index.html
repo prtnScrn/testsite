@@ -2,17 +2,42 @@
 <html>
 <head>
   <style>
-    
+    #TheOnethatWatches {
+		opacity:0;
+        transition: opacity 10s ease;
+    }
   </style>
   
   <title>人</title>
+ 
 </head>
 <body style="background-color:#FFFFFF;">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvX1wRNdUijMJ-ywKePIan-8HL6nxVQvJ8_g&s", style=""></img>
-  <text>Test site</text>
+  <img id="TheOnethatWatches" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvX1wRNdUijMJ-ywKePIan-8HL6nxVQvJ8_g&s"></img>
   
   <script>
-  
+  	const thing = document.getElementById('TheOnethatWatches');
+	
+	function fade(){
+      if(thing.style.opacity < 1){
+        thing.style.opacity += 0.05;
+      }else{
+        clearInterval(fade);
+      }
+	}
+	
+	function MouseStop(){
+      thing.style.display = 'block';
+      setInterval(fade,100);
+    }
+  	
+    document.addEventListener('mousemove', () => {
+      thing.style.display = 'none';
+      thing.style.opacity = 0;
+      clearInterval(fade);
+      clearTimeout(MouseStop);
+      setTimeout(MouseStop, 5000);
+    });
+    
   </script>
 </body>
 </html>
